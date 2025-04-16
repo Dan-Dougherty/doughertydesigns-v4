@@ -204,7 +204,7 @@ const IIDPCaseStudy = () => {
         </p>
         <ul>
           <li><strong>UX Design:</strong> Led strategy, architecture, wireframes, and overall user experience.</li>
-          <li><strong>WordPress Development:</strong> Built the site using Beaver Builder with a mobile-first approach.</li>
+          <li><strong>WordPress Development:</strong> Built the site using Beaver Builder with mobile responsiveness in mind.</li>
           <li><strong>Content Creation:</strong> Wrote and curated copy to ensure a consistent tone and hierarchy.</li>
         </ul>
       </div>
@@ -249,7 +249,7 @@ const IIDPCaseStudy = () => {
         <h3>Key Takeaways</h3>
         <ul>
           <li>The site must clearly showcase IIDP's programs and funnel donors to a simple, trustworthy donation flow.</li>
-          <li>A mobile-first design is essential.</li>
+          <li>A responsive design is essential.</li>
           <li>Limited testing meant relying on stakeholder feedback and best practices.</li>
         </ul>
       </section>
