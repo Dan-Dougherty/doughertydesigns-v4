@@ -1,0 +1,388 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.about-me-full {
+  padding: 60px 20px;
+  max-width: 1000px; /* Set max-width for desktop */
+  margin: 0 auto;
+}
+
+/* Ensure Typography Specificity */
+.about-me-full h1,
+.about-me-full h2,
+.about-me-full h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0073b1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.about-me-full h1 {
+  font-size: 2.4em; /* Existing font size */
+}
+
+.about-me-full h2 {
+  font-size: 1.8em; /* Updated font size */
+  font-weight: 700;
+}
+
+.about-me-full h3 {
+  font-size: 1.4em; /* Updated font size */
+}
+
+.about-me-full p,
+.about-me-full li {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+.about-me-full .about-me-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.about-me-full .about-me-header .logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+.about-me-full .about-me-nav a {
+  margin-left: 30px;
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.about-me-full .about-me-nav a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+
+/* Introduction Section */
+.about-me-full .introduction-section {
+  margin-bottom: 60px;
+}
+
+.about-me-full .introduction-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  align-items: center;
+  gap: 40px; /* Space between columns */
+}
+
+/* Left Column - Image */
+.about-me-full .introduction-image {
+  flex: 0 1 40%; /* Ensure it takes 40% of width but allows flexibility */
+  max-width: 400px; /* Maximum width for the image container */
+  text-align: center; /* Center the image for small screens */
+}
+
+.about-me-full .introduction-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-me-full .introduction-image img:hover {
+  transform: scale(1.05); /* Subtle zoom-in on hover */
+}
+
+/* Right Column - Text */
+.about-me-full .introduction-text {
+  flex: 0 1 55%; /* Flex basis set for text column */
+}
+
+.about-me-full .introduction-text h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #0073b1;
+  transition: color 0.3s;
+}
+
+.about-me-full .introduction-text h1:hover {
+  color: #005582;
+}
+
+.about-me-full .introduction-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Fun Facts Section */
+.about-me-full .fun-facts {
+  margin: 40px 0;
+}
+
+.about-me-full .fun-facts h2 {
+  margin-bottom: 20px;
+  color: #0073b1;
+  font-size: 1.8em; /* Ensuring consistent h2 size */
+}
+
+.about-me-full .fun-facts-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Space between items */
+  justify-items: center; /* Center-aligns items in each column */
+  margin-top: 30px;
+}
+
+.about-me-full .fun-fact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.about-me-full .fun-facts-icons .icon {
+  font-size: 3em; /* Consistent icon size */
+  color: #333;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.about-me-full .fun-facts-icons .icon:hover {
+  transform: scale(1.1); /* Slight hover effect */
+  color: #0073b1;
+}
+
+.about-me-full .fun-fact p {
+  font-size: 1em;
+  color: #333;
+  margin-top: 5px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+/* Unique Attributes Section */
+.about-me-full .attributes {
+  margin-top: 20px;
+}
+
+.about-me-full .attribute {
+  margin-bottom: 30px;
+}
+
+.about-me-full .attribute h3 {
+  font-size: 1.4em; /* Consistent h3 size */
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.about-me-full .attribute p {
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Skills & Tools Section */
+.about-me-full .skills-tools {
+  margin-top: 20px;
+}
+
+.about-me-full .skills-category {
+  margin-bottom: 30px;
+}
+
+.about-me-full .skills-category h3 {
+  font-size: 1.4em; /* Consistent h3 size */
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.about-me-full .skills-category ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-me-full .skills-category ul li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.about-me-full .skills-category ul li strong {
+  font-weight: 600;
+}
+
+.about-me-full .skills-category p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Back Button Styling */
+.about-me-full .back-button {
+  display: inline-block;
+  margin-top: 30px;
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  border: 1px solid #0073b1;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about-me-full .back-button:hover {
+  background-color: #0073b1;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Fade-in animation */
+.about-me-full .fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-me-full .fade-in-section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-me-full {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .about-me-full .about-me-header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .about-me-full .about-me-nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-me-full .about-me-nav a {
+    margin: 5px 10px;
+    padding: 8px 15px;
+    font-size: 1em;
+  }
+
+  /* Center h1 and h2 Headings */
+  .about-me-full h1,
+  .about-me-full h2 {
+    text-align: center;
+  }
+
+  /* Introduction Section Responsive */
+  .about-me-full .introduction-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+  }
+
+  .about-me-full .introduction-image,
+  .about-me-full .introduction-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .about-me-full .introduction-text h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+
+  .about-me-full .introduction-text p {
+    text-align: left; /* Left-align paragraphs */
+    margin: 10px 0;
+  }
+
+  /* Adjust List Item Indentation */
+  .about-me-full .skills-category ul,
+  .about-me-full .skills-category ul li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .about-me-full .skills-category ul {
+    list-style-position: inside; /* Bullets inside content */
+  }
+
+  /* Fun Facts Section Responsive */
+  .about-me-full .fun-facts-icons {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 20px;
+  }
+
+  .about-me-full .fun-fact p {
+    padding: 0 20px;
+  }
+}
+
+/* Additional Media Query for Screens Under 425px */
+@media (max-width: 425px) {
+  .about-me-full .about-me-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;
+  }
+
+  .about-me-full .about-me-nav a {
+    margin: 5px 0;
+    width: 100%; /* Optional: make links full-width */
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-me-full .introduction-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .about-me-full .introduction-image {
+    flex: 0 1 45%;
+  }
+
+  .about-me-full .introduction-text {
+    flex: 0 1 50%;
+    margin-left: 10px;
+  }
+
+  .about-me-full .introduction-text h1 {
+    font-size: 2em;
+  }
+
+  .about-me-full .introduction-text p {
+    line-height: 1.7;
+    margin: 20px 0;
+  }
+}

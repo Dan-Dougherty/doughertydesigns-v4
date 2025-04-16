@@ -1,0 +1,490 @@
+/* MainContent.css */
+.main-content {
+  flex-grow: 1; 
+  padding: 40px;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  color: #333;
+  background-color: #fff;
+}
+
+.main-content section {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.main-content section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.main-content h2 svg {
+  margin-right: 10px;
+}
+
+.main-content p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.main-content a {
+  color: #005582;
+  text-decoration: none;
+}
+
+.main-content a:hover {
+  text-decoration: underline;
+}
+
+/* About Me Section */
+.main-content .about-text p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.main-content .about-cta {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content .button {
+  display: inline-block;
+  background-color: #005582;
+  color: #fff;
+  padding: 10px 20px; /* Larger padding for touchpoints */
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Space between rows */
+  transition: background-color 0.3s;
+}
+
+.main-content .button.secondary {
+  background-color: #555;
+}
+
+.main-content .button.secondary:hover {
+  background-color: #333;
+}
+
+.main-content .button:hover {
+  background-color: #003f5c;
+}
+
+/* Consolidated Focus Styles */
+.main-content .button:focus,
+.main-content .button.secondary:focus,
+.main-content .submit-button:focus,
+.main-content .contact-form input:focus,
+.main-content .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 85, 130, 0.5);
+}
+
+/* Case Studies Section */
+.main-content .case-studies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.main-content .case-study-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+
+.main-content .case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-content .case-study-image-container {
+  width: 100%;
+  padding-top: 70%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.main-content .case-study-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-content .non-profit {
+  object-fit: contain;
+}
+
+.main-content .case-study-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content .case-study-content h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main-content .case-study-content p {
+  color: #333;
+  flex-grow: 1;
+}
+
+.main-content .skills {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.main-content .skills span {
+  display: inline-block;
+  background-color: #005582;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+}
+
+.main-content .read-more {
+  align-self: flex-start;
+  margin-top: 25px;
+  color: #005582;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.main-content .read-more:hover {
+  text-decoration: underline;
+  color: #003f5c;
+}
+
+/* Timeline Styles */
+.main-content .timeline {
+  margin: 20px 0;
+  position: relative;
+}
+
+.main-content .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.main-content .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 90px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #005582;
+}
+
+.main-content .timeline-date {
+  flex-shrink: 0;
+  width: 100px;
+  text-align: left;
+  font-weight: bold;
+  color: #005582;
+  margin-right: 0px;
+}
+
+.main-content .timeline-content {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .timeline-content h3 {
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.main-content .timeline-content .em {
+  margin-bottom: 0px;
+}
+
+.main-content .timeline-content p {
+  margin-bottom: 10px;
+}
+
+.main-content .timeline-content .achievements {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.main-content .timeline-content .achievements li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.main-content .timeline-content .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.main-content .timeline-content .skills span {
+  background-color: #005582;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+}
+
+.main-content .certifications {
+  margin-top: 30px;
+}
+
+.main-content .certifications h3 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.main-content .certification-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-content .certification-item {
+  background-color: #005582;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  flex: 1 1 calc(50% - 10px);
+}
+
+.main-content .certification-item p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #ffffff;
+}
+
+/* Contact Form Styles */
+.main-content .contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.main-content .form-group label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.main-content .form-group input,
+.main-content .form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.main-content .form-group textarea {
+  height: 150px;   /* Makes the message box larger */
+  resize: none;    /* Prevents resizing */
+}
+
+.main-content .form-group input:focus,
+.main-content .form-group textarea:focus {
+  border-color: #005582;
+  box-shadow: 0 0 5px rgba(0, 85, 130, 0.5);
+  outline: none;
+}
+
+/* Placeholder Styles */
+.main-content .contact-form input::placeholder,
+.main-content .contact-form textarea::placeholder {
+  color: #aaa;
+  opacity: 1;
+  font-size: 0.95em; /* Ensures consistent font size */
+}
+
+/* Submit Button */
+.main-content .submit-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #005582;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.main-content .submit-button:hover {
+  background-color: #003f5c;
+  transform: translateY(-2px);
+}
+
+.main-content .submit-button:active {
+  background-color: #002e47;
+  transform: translateY(0);
+}
+
+/* Form Status Message */
+.main-content .form-status {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+/* Success Message Style */
+.main-content .form-status.success {
+  color: #28a745; /* Green color for success */
+}
+
+/* Error Message Style */
+.main-content .form-status.error {
+  color: #dc3545; /* Red color for error */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding: 20px;
+    max-width: none;
+  }
+
+  /* Adjust About Me buttons on smaller screens */
+  .main-content .about-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content .button,
+  .main-content .button.secondary {
+    width: 100%;          /* Buttons take full width */
+    max-width: 200px;     /* Limit maximum width */
+    padding: 15px 30px;   /* Larger padding for touchpoints */
+    margin-right: 0;      /* Remove right margin */
+    margin-bottom: 15px;  /* Space between buttons */
+    text-align: center;
+  }
+
+  .main-content .button:last-child,
+  .main-content .button.secondary:last-child {
+    margin-bottom: 0;     /* Remove bottom margin from last button */
+  }
+
+  .main-content .case-studies-container {
+    flex-direction: column;
+  }
+
+  .main-content .case-study-card {
+    flex: 1 1 100%;
+  }
+
+  /* Timeline Mobile Adjustments */
+  .main-content .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-content .timeline-item::before {
+    left: 0;
+    top: 0px;
+    height: 100%;
+    background: #005582;
+  }
+
+  .main-content .timeline-date {
+    width: auto;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 0px;
+    color: #005582;
+  }
+
+  .main-content .timeline-content {
+    margin-left: 0;
+  }
+
+  .main-content .certification-item {
+    background-color: #005582;
+    color: #ffffff;
+    border-left: 4px solid #005582;
+    flex: 1 1 100%;
+  }
+
+  .main-content .skills span,
+  .main-content .timeline-content .skills span {
+    font-size: 0.8em;
+    padding: 4px 8px;
+    background-color: #005582;
+    color: #fff;
+  }
+
+  .main-content .achievements {
+    margin-left: 20px;
+  }
+
+  .main-content section h2 {
+    font-size: 1.8em;
+  }
+
+  .main-content .timeline-content h3 {
+    font-size: 1.3em;
+  }
+
+  .main-content .certifications h3 {
+    font-size: 1.5em;
+  }
+}
+
+/* Accessibility Enhancements */
+/* Focus Styles for Links and Buttons */
+.main-content .button:focus,
+.main-content .button.secondary:focus,
+.main-content .submit-button:focus,
+.main-content .contact-form input:focus,
+.main-content .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 85, 130, 0.5);
+}

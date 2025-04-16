@@ -1,0 +1,290 @@
+/* Sidebar.css */
+
+/* Sidebar container styling */
+.sidebar {
+  flex: 0 0 40%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #f7f7f7 0%, #f0f0f0 100%);
+  padding-left: 25px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content {
+  position: sticky;
+  top: 0;
+  padding: 15px 15px 15px 0;
+  width: 100%;
+}
+
+/* Name and Title Styling */
+.sidebar .name {
+  font-size: 1.8em;
+  margin: 20px 0 0px 0;
+}
+
+.sidebar .title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+  color: #555;
+}
+
+/* Contact Info Section */
+.sidebar .contact-info {
+  margin-bottom: 20px;
+}
+
+.sidebar .contact-info h2 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  border-bottom: none;
+}
+
+.sidebar .contact-info p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.sidebar .contact-info p a {
+  color: #005582;
+  text-decoration: none;
+}
+
+.sidebar .contact-info p a:hover {
+  text-decoration: underline;
+}
+
+/* Inline Social Links */
+.sidebar .social-links-inline {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.sidebar .social-links-inline a {
+  color: #005582;
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+.sidebar .social-links-inline a:hover {
+  color: #003f5c;
+}
+
+/* Resume Button */
+.sidebar .view-resume {
+  color: #ffffff;
+  background-color: #005582;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.sidebar .view-resume:hover {
+  background-color: #003f5c;
+}
+
+/* Skills Section */
+.sidebar .skills {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar .skills h2 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  text-align: left;
+  width: 100%;
+  border-bottom: none;
+}
+
+/* Skills List */
+.sidebar .skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar .skills-list li {
+  color: #005582;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar .skills-list li:hover {
+  color: #003f5c;
+  transform: translateY(-2px);
+}
+
+/* Social Links Section */
+.sidebar .social-links {
+  margin-bottom: 10px;
+}
+
+.sidebar .social-links h3 {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.sidebar .social-links ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar .social-links ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar .social-links ul li a {
+  text-decoration: none;
+  color: #005582;
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+  transition: color 0.3s;
+}
+
+.sidebar .social-links ul li a:hover {
+  color: #003f5c;
+  text-decoration: underline;
+}
+
+.sidebar .social-links ul li a svg {
+  margin-right: 6px;
+  font-size: 1.2em;
+}
+
+/* Paragraphs and Links */
+.sidebar p,
+.sidebar a {
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* Media Queries */
+
+/* Large Desktop Screens */
+@media (min-width: 1200px) {
+  .sidebar {
+    flex: 0 0 40%;
+    max-width: 400px;
+  }
+
+  .sidebar .name {
+    font-size: 2em;
+  }
+
+  .sidebar .title {
+    font-size: 1.2em;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .sidebar {
+    max-width: 300px;
+    padding-left: 20px;
+  }
+
+  .sidebar .name {
+    font-size: 1.6em;
+  }
+
+  .sidebar .title {
+    font-size: 1em;
+  }
+}
+
+/* Small Tablets and Large Mobile Screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar-content {
+    text-align: center;
+  }
+
+  /* Center-align text elements */
+  .sidebar .name,
+  .sidebar .title,
+  .sidebar .contact-info h2,
+  .sidebar .skills h2,
+  .sidebar .skills-list,
+  .sidebar .social-links h2,
+  .sidebar p,
+  .sidebar a {
+    text-align: center;
+  }
+
+  /* Centered and properly spaced View Resume button */
+  .sidebar .view-resume {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* Centered and spaced social links with larger touch targets */
+  .sidebar .social-links-inline {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .sidebar .social-links-inline a {
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  /* Skills Section */
+  .sidebar .skills {
+    margin-top: 15px;
+  }
+
+  .sidebar .skills-list {
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+/* Extra Small Mobile Screens */
+@media (max-width: 480px) {
+  /* Add any extra small screen styles if needed */
+}
+
+/* Accessibility Enhancements */
+.sidebar .social-links ul li a:focus,
+.sidebar .contact-info a:focus,
+.sidebar .view-resume:focus {
+  outline: 2px dashed #005582;
+  outline-offset: 4px;
+}

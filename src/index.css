@@ -1,0 +1,30 @@
+/* Import Montserrat and Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Apply Open Sans to body text */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Apply Montserrat to all header elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* Ensure paragraphs, links, and spans use Open Sans */
+p, a, span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* Code blocks retain Source Code Pro */
+code {
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

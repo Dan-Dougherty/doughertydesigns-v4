@@ -1,0 +1,35 @@
+/* App.css */
+
+/* Adjusted .app class */
+.app {
+  width: 100%;
+}
+
+/* Updated .container class */
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px; /* Restore the max-width */
+  width: 100%;
+  margin: 0 auto;    /* Center the container */
+  min-height: 100vh; /* Ensure the container fills the viewport height */
+}
+
+/* Adjusted .app.full-width class */
+.app.full-width {
+  width: 100%;
+}
+
+/* Adjusted .app.full-width child elements */
+.app.full-width .main-content,
+.app.full-width .case-study-full {
+  width: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+}

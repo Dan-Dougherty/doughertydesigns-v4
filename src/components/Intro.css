@@ -1,0 +1,142 @@
+@media (min-width: 1024px) {
+/* Container for the intro animation */
+.intro-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0; /* Background color for the loading screen */
+    overflow: hidden; /* Prevent overflow */
+    animation: intro-fade-out 6s ease forwards 8s; /* Fade out the intro after 8 seconds */
+}
+  
+/* Ground styling */
+/* Ground styling with a subtle, modern gradient */
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #888, #bcbcbc); /* Soft gray gradient for depth */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Light shadow for a 3D feel */
+}
+
+/* Animated Name and Title */
+.intro-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInAndScaleUp 1s ease forwards 0.5s; /* Delay for smooth fade-in */
+}
+
+.intro-text h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0 0;
+    opacity: 0;
+    animation: fadeInAndScaleUp 1s ease forwards 0.7s; /* Slight delay for the second line */
+}
+
+/* Subtle fade-in and scale-up animation */
+@keyframes fadeInAndScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Slightly smaller */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Return to normal size */
+    }
+}
+
+  
+/* Cat styling */
+.cat {
+    position: absolute;
+    bottom: 30px; /* Keep the cat above the ground */
+    left: -150px; /* Start the cat off the screen */
+    animation: cat-run-across-screen 2.4s linear forwards 0.2s; /* Start cat animation after 0.4s, longer run time */
+}
+  
+/* Cat GIF styling */
+.cat-gif {
+    width: 150px; /* Adjust size as needed */
+    transform: scaleX(-1); /* Flip the cat horizontally */
+}
+  
+/* Ball styling */
+.ball {
+    position: absolute;
+    bottom: 50px; /* Keep the ball above the ground */
+    left: -120px; /* Start the ball slightly ahead of the cat */
+    width: 15px;
+    height: 15px;
+    background-color: #007bbd;
+    border-radius: 50%;
+    animation: ball-bounce 2.4s linear forwards; /* Ball animation matches cat duration but is slightly faster */
+    z-index: 1; /* Ensure ball is in front of the cat */
+}
+  
+/* Keyframe for the cat running across the screen */
+@keyframes cat-run-across-screen {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%; /* Move the cat off the screen */
+    }
+}
+  
+/* Keyframe for the ball bouncing across the screen */
+@keyframes ball-bounce {
+    0% {
+        left: -120px; /* Start slightly ahead of the cat */
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-30px); /* Ball bounces up */
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-20px); /* Small bounce */
+    }
+    95% {
+        left: 100%; /* Ball moves off the screen slightly before the cat */
+        transform: translateY(0);
+    }
+    100% {
+        left: 110%; /* Ensure ball exits the screen completely */
+    }
+}
+
+/* Fade out the intro container after the animation */
+@keyframes intro-fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden; /* Hide the container after fading out */
+    }
+}
+}
+
+/* For smaller screens, hide the intro animation */
+@media (max-width: 1023px) {
+    .intro-container {
+        display: none; /* Hide the intro on mobile devices */
+    }
+  }

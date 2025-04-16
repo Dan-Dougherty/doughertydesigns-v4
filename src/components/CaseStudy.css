@@ -1,0 +1,751 @@
+/* CaseStudy.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Case Study Container */
+.case-study-full {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100%;
+  width: 100%;
+  padding: 60px 20px;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* Headings */
+.case-study-full h1,
+.case-study-full h2,
+.case-study-full h3,
+.case-study-full h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+}
+
+.case-study-full h1 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #0073b1;
+}
+
+.case-study-full h2 {
+  font-size: 1.8em;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.case-study-full h3 {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.case-study-full h4 {
+  font-size: 1.2em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs and List Items */
+.case-study-full p,
+.case-study-full li {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Lists */
+.case-study-full ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.case-study-full ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.case-study-full ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.case-study-full ol li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Links */
+.case-study-full a {
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 600;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.case-study-full a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styling */
+.case-study-full .case-study-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.case-study-full .case-study-header .logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+}
+
+.case-study-full .case-study-nav a {
+  margin-left: 30px;
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.case-study-full .case-study-nav a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+
+/* Roles Section */
+.case-study-full .roles {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+.case-study-full .roles p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.case-study-full .roles p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-full .roles strong {
+  font-weight: 700;
+}
+
+/* Blockquotes */
+.case-study-full blockquote {
+  font-style: italic;
+  color: #333;
+  border-left: 4px solid #ddd;
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+/* Image and Video Containers */
+.case-study-full .image-container,
+.case-study-full .video-container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.case-study-full .image-container img,
+.case-study-full .video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+/* Ensure Videos are Always in a Single Column */
+.case-study-full .video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.case-study-full .desktop-only h3 {
+  margin-top: 0px;
+}
+
+/* Prototype Links */
+.case-study-full .prototype-links {
+  margin-top: 20px;
+}
+
+/* Prototype Buttons */
+.case-study-full .prototype-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Prototype Button Styling */
+.case-study-full .prototype-button {
+  display: inline-block;
+  color: #fff;
+  background-color: #0073b1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.case-study-full .prototype-button:hover {
+  background-color: #005f8a;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* Button Container */
+.case-study-full .button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0;
+}
+
+/* Back Button Styling */
+.case-study-full .back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  border: 1px solid #0073b1;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  height: 40px;
+  line-height: 1;
+  margin: 0;
+  margin-top: 30px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.case-study-full .back-button:hover {
+  background-color: #0073b1;
+  color: #fff;
+}
+
+/* Enhanced Side-by-Side Layout */
+.case-study-full .side-by-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 20px 0;
+  align-items: flex-start;
+}
+
+.case-study-full .side-by-side .side-text,
+.case-study-full .side-by-side .side-image {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Fixed height container for images */
+.case-study-full .side-by-side .side-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 10px 0;
+}
+
+/* Section transitions and spacing */
+.case-study-full section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.case-study-full section:last-child {
+  border-bottom: none;
+}
+
+/* UNIFIED THUMBNAIL STYLING 
+------------------------------------------
+All images now use this consistent thumbnail style */
+
+/* Base thumbnail container */
+.case-study-full .cs-thumbnail {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.case-study-full .cs-thumbnail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image wrapper to maintain consistent height */
+.case-study-full .cs-thumbnail-image-wrapper {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* For gallery images, add a gallery indicator */
+.case-study-full .cs-thumbnail.cs-gallery-trigger .cs-thumbnail-image-wrapper::after {
+  content: "Click to view gallery";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 115, 177, 0.8);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* For comparison images, add a comparison indicator */
+.case-study-full .cs-thumbnail.cs-compare-trigger .cs-thumbnail-image-wrapper::after {
+  content: "Click to view comparison";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 115, 177, 0.8);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+}
+
+.case-study-full .cs-thumbnail:hover .cs-thumbnail-image-wrapper::after {
+  opacity: 1;
+}
+
+/* Image styling inside the wrapper */
+.case-study-full .cs-thumbnail-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.case-study-full .cs-thumbnail:hover .cs-thumbnail-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Caption styling */
+.case-study-full .cs-thumbnail-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #0073b1;
+  padding: 12px 15px;
+  font-weight: 600;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+}
+
+/* Thumbnails grid container */
+.case-study-full .cs-thumbnails-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  margin: 30px 0 40px;
+}
+
+/* Layout adjustments for side-by-side thumbnails */
+.case-study-full .side-by-side .side-image .cs-thumbnail {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Accessibility Enhancements */
+.case-study-full a:focus,
+.case-study-full .back-button:focus,
+.case-study-full .prototype-button:focus,
+.case-study-full .cs-thumbnail:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 115, 177, 0.5);
+}
+
+/* Visual indicators for clickable elements */
+.case-study-full [role="button"],
+.case-study-full .cs-thumbnail {
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .case-study-full {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  /* Header Styling */
+  .case-study-full .case-study-header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .case-study-full .case-study-nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .case-study-full .case-study-nav a {
+    margin: 5px 10px;
+    padding: 8px 15px;
+    font-size: 1em;
+  }
+
+  /* Center h1 and h2 Headings */
+  .case-study-full h1 {
+    text-align: center;
+  }
+
+  /* Adjust List Item Indentation */
+  .case-study-full ul,
+  .case-study-full ul li,
+  .case-study-full ol,
+  .case-study-full ol li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .case-study-full ul,
+  .case-study-full ol {
+    list-style-position: inside; /* Bullets inside content */
+  }
+
+  /* Video and Image Adjustments */
+  .case-study-full .mobile-video-wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .case-study-full .mobile-video {
+    max-width: 100%;
+    width: 100%;             /* Ensure the video spans the full width */
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;       /* Ensures the video fills the container */
+  }
+
+  /* Adjust Font Sizes for Readability */
+  .case-study-full h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .case-study-full h2 {
+    font-size: 1.5em;
+  }
+
+  .case-study-full h3 {
+    font-size: 1.2em;
+  }
+
+  .case-study-full p {
+    font-size: 0.95em;
+  }
+
+  /* Stack prototype buttons vertically on mobile */
+  .case-study-full .prototype-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .case-study-full .prototype-buttons .prototype-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Adjust Back Button */
+  .case-study-full .back-button {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  /* Side-by-side becomes column on mobile */
+  .case-study-full .side-by-side {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .case-study-full .side-by-side .side-text,
+  .case-study-full .side-by-side .side-image {
+    width: 100%;
+  }
+
+  /* Thumbnail grid becomes column on mobile */
+  .case-study-full .cs-thumbnails-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .case-study-full .cs-thumbnail {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .case-study-full .cs-thumbnail-image-wrapper {
+    height: 250px; /* Slightly shorter on mobile */
+  }
+  
+  .case-study-full .cs-thumbnail-caption {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Ensure text doesn't overflow */
+  .case-study-full p,
+  .case-study-full a,
+  .case-study-full .back-button,
+  .case-study-full .prototype-button {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Additional Media Query for Screens Under 425px */
+@media (max-width: 425px) {
+  /* Hide desktop-only elements on very small screens */
+  .case-study-full .desktop-only {
+    display: none;
+  }
+
+  /* Adjust Navigation Links */
+  .case-study-full .case-study-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-study-full .case-study-nav a {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .case-study-full .cs-thumbnails-container {
+    margin: 20px 0 30px;
+  }
+  
+  .case-study-full .cs-thumbnail-image-wrapper {
+    height: 200px; /* Even shorter on very small screens */
+  }
+  
+  .case-study-full .cs-thumbnail:hover {
+    transform: none; /* Disable hover effects on very small screens */
+  }
+  
+  .case-study-full .cs-thumbnail .cs-thumbnail-image-wrapper::after {
+    display: none; /* Hide the hover overlay on very small screens */
+  }
+}
+
+/* Enhanced Section Heading Styles */
+
+/* Section Headings (h2) with decorative element and color */
+.case-study-full h2 {
+  font-size: 1.8em;
+  margin-top: 40px;
+  margin-bottom: 015px;
+  border-bottom: none;
+  padding-bottom: 0px;
+  position: relative;
+  color: #0073b1; /* Use the existing brand blue color */
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Add decorative element before the heading */
+.case-study-full h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #0073b1;
+  border-radius: 3px;
+}
+
+/* Adjust Subsection Headings (h3) */
+.case-study-full h3 {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333; /* Keep these dark for contrast */
+  position: relative;
+}
+
+.case-study-full #research-insights h2::after {
+  background-color: #3c9469; /* A greenish accent for research section */
+}
+
+.case-study-full #ux-strategy h2::after {
+  background-color: #d4a017; /* Gold accent for strategy section */
+}
+
+.case-study-full #final-solution h2::after {
+  background-color: #5c9dc4; /* Lighter blue for solution section */
+}
+
+.case-study-full #before-after h2::after {
+  background-color: #7c4dff; /* Purple accent for visuals section */
+}
+
+.case-study-full #reflections h2::after {
+  background-color: #e67e22; /* Orange accent for lessons learned */
+}
+
+/* Tablet-Specific Styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .case-study-full {
+    padding: 50px 25px;
+  }
+
+  .case-study-full .case-study-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+  }
+
+  .case-study-full .case-study-nav a {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+  }
+
+  /* Video and Image Adjustments */
+  .case-study-full .video-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .case-study-full .mobile-video-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .case-study-full .mobile-video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+  }
+
+  /* Adjust Font Sizes */
+  .case-study-full h1 {
+    font-size: 2em;
+  }
+
+  .case-study-full h2 {
+    font-size: 1.6em;
+  }
+
+  .case-study-full h3 {
+    font-size: 1.4em;
+  }
+
+  .case-study-full p {
+    font-size: 1em;
+  }
+
+  /* Adjust Back Button */
+  .case-study-full .back-button {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+}
+
+/* Styles for Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .case-study-full {
+    padding: 60px 30px;
+    max-width: 1000px;
+  }
+
+  .case-study-full .video-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .case-study-full .mobile-video-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .case-study-full .mobile-video {
+    width: 100%;
+    max-height: 700px;
+  }
+
+  /* Maintain Prototype Buttons Inline */
+  .case-study-full .prototype-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .case-study-full .prototype-buttons .prototype-button {
+    width: auto;
+  }
+
+  .case-study-full .back-button {
+    font-size: 1.1em;
+    padding: 12px 18px;
+  }
+}
+
