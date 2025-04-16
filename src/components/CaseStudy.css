@@ -70,31 +70,6 @@
   width: 100%;
 }
 
-/* Responsive adjustments for sticky header */
-@media (max-width: 768px) {
-  .case-study-header {
-    padding: 15px;
-  }
-  
-  /* For mobile, make logo smaller when scrolling */
-  .case-study-header.scrolled .logo {
-    font-size: 1.5em;
-  }
-  
-  /* Adjust navigation layout for small screens */
-  .case-study-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 5px;
-  }
-  
-  .case-study-nav a {
-    white-space: nowrap;
-    margin-right: 15px;
-  }
-}
-
 /* Case Study Container */
 .case-study-full {
   font-family: 'Open Sans', sans-serif;
@@ -471,7 +446,7 @@ All images now use this consistent thumbnail style */
   flex-wrap: wrap;
   gap: 30px;
   justify-content: flex-start;
-  margin: 30px 0 40px;
+  margin: 20px 0 0 0;
 }
 
 /* Layout adjustments for side-by-side thumbnails */
@@ -498,199 +473,20 @@ All images now use this consistent thumbnail style */
 /* Responsive Styles */
 
 /* Mobile Styles (max-width: 768px) */
-@media (max-width: 768px) {
-  .case-study-full {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  /* Header Styling */
-  .case-study-full .case-study-header {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  .case-study-full .case-study-nav {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .case-study-full .case-study-nav a {
-    margin: 5px 10px;
-    padding: 8px 15px;
-    font-size: 1em;
-  }
-
-  /* Center h1 and h2 Headings */
-  .case-study-full h1 {
-    text-align: center;
-  }
-
-  /* Adjust List Item Indentation */
-  .case-study-full ul,
-  .case-study-full ul li,
-  .case-study-full ol,
-  .case-study-full ol li {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .case-study-full ul,
-  .case-study-full ol {
-    list-style-position: inside; /* Bullets inside content */
-  }
-
-  /* Video and Image Adjustments */
-  .case-study-full .mobile-video-wrapper {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .case-study-full .mobile-video {
-    max-width: 100%;
-    width: 100%;             /* Ensure the video spans the full width */
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    object-fit: cover;       /* Ensures the video fills the container */
-  }
-
-  /* Adjust Font Sizes for Readability */
-  .case-study-full h1 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-  }
-
-  .case-study-full h2 {
-    font-size: 1.5em;
-  }
-
-  .case-study-full h3 {
-    font-size: 1.2em;
-  }
-
-  .case-study-full p {
-    font-size: 0.95em;
-  }
-
-  /* Stack prototype buttons vertically on mobile */
-  .case-study-full .prototype-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .case-study-full .prototype-buttons .prototype-button {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Adjust Back Button */
-  .case-study-full .back-button {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-
-  /* Side-by-side becomes column on mobile */
-  .case-study-full .side-by-side {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .case-study-full .side-by-side .side-text,
-  .case-study-full .side-by-side .side-image {
-    width: 100%;
-  }
-
-  /* Thumbnail grid becomes column on mobile */
-  .case-study-full .cs-thumbnails-container {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-  }
-  
-  .case-study-full .cs-thumbnail {
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .case-study-full .cs-thumbnail-image-wrapper {
-    height: 250px; /* Slightly shorter on mobile */
-  }
-  
-  .case-study-full .cs-thumbnail-caption {
-    padding: 10px;
-    font-size: 0.85rem;
-  }
-
-  /* Ensure text doesn't overflow */
-  .case-study-full p,
-  .case-study-full a,
-  .case-study-full .back-button,
-  .case-study-full .prototype-button {
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-}
-
-/* Additional Media Query for Screens Under 425px */
-@media (max-width: 425px) {
-  /* Hide desktop-only elements on very small screens */
-  .case-study-full .desktop-only {
-    display: none;
-  }
-
-  /* Adjust Navigation Links */
-  .case-study-full .case-study-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .case-study-full .case-study-nav a {
-    margin: 5px 0;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .case-study-full .cs-thumbnails-container {
-    margin: 20px 0 30px;
-  }
-  
-  .case-study-full .cs-thumbnail-image-wrapper {
-    height: 200px; /* Even shorter on very small screens */
-  }
-  
-  .case-study-full .cs-thumbnail:hover {
-    transform: none; /* Disable hover effects on very small screens */
-  }
-  
-  .case-study-full .cs-thumbnail .cs-thumbnail-image-wrapper::after {
-    display: none; /* Hide the hover overlay on very small screens */
-  }
-}
-
-/* Enhanced Section Heading Styles */
-
-/* Section Headings (h2) with decorative element and color */
+/* Base styles for section headings */
 .case-study-full h2 {
   font-size: 1.8em;
   margin-top: 40px;
-  margin-bottom: 015px;
+  margin-bottom: 15px;
   border-bottom: none;
   padding-bottom: 0px;
   position: relative;
-  color: #0073b1; /* Use the existing brand blue color */
+  color: #0073b1;
   padding-left: 15px;
   display: flex;
   align-items: center;
 }
 
-/* Add decorative element before the heading */
 .case-study-full h2::before {
   content: "";
   position: absolute;
@@ -702,96 +498,36 @@ All images now use this consistent thumbnail style */
   border-radius: 3px;
 }
 
-/* Adjust Subsection Headings (h3) */
 .case-study-full h3 {
   font-size: 1.4em;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #333; /* Keep these dark for contrast */
+  color: #333;
   position: relative;
 }
 
+/* Section-specific accent colors */
 .case-study-full #research-insights h2::after {
-  background-color: #3c9469; /* A greenish accent for research section */
+  background-color: #3c9469;
 }
 
 .case-study-full #ux-strategy h2::after {
-  background-color: #d4a017; /* Gold accent for strategy section */
+  background-color: #d4a017;
 }
 
 .case-study-full #final-solution h2::after {
-  background-color: #5c9dc4; /* Lighter blue for solution section */
+  background-color: #5c9dc4;
 }
 
 .case-study-full #before-after h2::after {
-  background-color: #7c4dff; /* Purple accent for visuals section */
+  background-color: #7c4dff;
 }
 
 .case-study-full #reflections h2::after {
-  background-color: #e67e22; /* Orange accent for lessons learned */
+  background-color: #e67e22;
 }
 
-/* Tablet-Specific Styles (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .case-study-full {
-    padding: 50px 25px;
-  }
-
-  .case-study-full .case-study-header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 25px;
-  }
-
-  .case-study-full .case-study-nav a {
-    margin-left: 20px;
-    margin-right: 10px;
-    font-size: 1em;
-  }
-
-  /* Video and Image Adjustments */
-  .case-study-full .video-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .case-study-full .mobile-video-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .case-study-full .mobile-video {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-  }
-
-  /* Adjust Font Sizes */
-  .case-study-full h1 {
-    font-size: 2em;
-  }
-
-  .case-study-full h2 {
-    font-size: 1.6em;
-  }
-
-  .case-study-full h3 {
-    font-size: 1.4em;
-  }
-
-  .case-study-full p {
-    font-size: 1em;
-  }
-
-  /* Adjust Back Button */
-  .case-study-full .back-button {
-    font-size: 1em;
-    padding: 10px 15px;
-  }
-}
-
-/* Styles for Desktop (min-width: 1025px) */
+/* Desktop styles (min-width: 1025px) */
 @media (min-width: 1025px) {
   .case-study-full {
     padding: 60px 30px;
@@ -813,7 +549,6 @@ All images now use this consistent thumbnail style */
     max-height: 700px;
   }
 
-  /* Maintain Prototype Buttons Inline */
   .case-study-full .prototype-buttons {
     flex-direction: row;
     align-items: center;
@@ -829,3 +564,256 @@ All images now use this consistent thumbnail style */
   }
 }
 
+/* Tablet styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .case-study-full {
+    padding: 50px 25px;
+  }
+
+  .case-study-full .case-study-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+  }
+
+  .case-study-full .case-study-nav a {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+  }
+
+  .case-study-full .video-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .case-study-full .mobile-video-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .case-study-full .mobile-video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+  }
+
+  .case-study-full h1 {
+    font-size: 2em;
+  }
+
+  .case-study-full h2 {
+    font-size: 1.6em;
+  }
+
+  .case-study-full h3 {
+    font-size: 1.4em;
+  }
+
+  .case-study-full p {
+    font-size: 1em;
+  }
+
+  .case-study-full .back-button {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+}
+
+/* Mobile & Small Tablet styles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Header and Navigation */
+  .case-study-full .case-study-header {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;               
+    align-items: center;
+    background: #fff;
+    padding: 8px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .case-study-full .case-study-header .logo,
+  .case-study-full .hamburger-menu {
+    display: none !important;
+  }
+
+  .case-study-full .case-study-nav {
+    display: flex !important;
+    flex: 1;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .case-study-full .case-study-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #0073b1;
+    transition: background 0.2s, color 0.2s;
+    margin-left: 0 !important;
+  }
+
+  .case-study-full .case-study-nav a:hover,
+  .case-study-full .case-study-nav a.active {
+    background: rgba(0,115,177,0.1);
+    color: #003f5c;
+  }
+
+  /* Text and Layout */
+  .case-study-full {
+    padding: 0px 20px 20px 20px;
+  }
+
+  .case-study-full h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .case-study-full h2 {
+    font-size: 1.5em;
+    
+  }
+
+  .case-study-full h3 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .case-study-full p {
+    font-size: 0.95em;
+  }
+
+  /* Lists */
+  .case-study-full ul,
+  .case-study-full ol {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .case-study-full ul li,
+  .case-study-full ol li {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  /* Videos and Images */
+  .case-study-full .mobile-video-wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .case-study-full .mobile-video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+
+  /* Buttons and Components */
+  .case-study-full .prototype-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .case-study-full .prototype-buttons .prototype-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .case-study-full .back-button {
+    font-size: 0.9em;
+    padding: 8px 12px;
+    width: 100%;
+  }
+
+  /* Layout Components */
+  .case-study-full .side-by-side {
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .case-study-full .side-by-side .side-text,
+  .case-study-full .side-by-side .side-image {
+    width: 100%;
+  }
+
+  /* Thumbnails */
+  .case-study-full .cs-thumbnails-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 20px 0 30px;
+  }
+  
+  .case-study-full .cs-thumbnail {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .case-study-full .cs-thumbnail-image-wrapper {
+    height: 250px;
+  }
+  
+  .case-study-full .cs-thumbnail-caption {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Text Handling */
+  .case-study-full p,
+  .case-study-full a,
+  .case-study-full .back-button,
+  .case-study-full .prototype-button {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Extra small screens (max-width: 425px) */
+@media (max-width: 425px) {
+  .case-study-full .desktop-only {
+    display: none;
+  }
+
+  .case-study-full .case-study-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-study-full .case-study-nav a {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .case-study-full .cs-thumbnail-image-wrapper {
+    height: 200px;
+  }
+  
+  .case-study-full .cs-thumbnail:hover {
+    transform: none;
+  }
+  
+  .case-study-full .cs-thumbnail .cs-thumbnail-image-wrapper::after {
+    display: none;
+  }
+}

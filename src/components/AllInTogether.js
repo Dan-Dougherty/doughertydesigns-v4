@@ -7,50 +7,56 @@ import NonProfitMobile from '../assets/videos/NonProfitMobile.mp4';
 const AllInTogether = () => {
   const location = useLocation();
 
+  // Sticky header on scroll
   useEffect(() => {
     document.title = "All In Together Case Study | Dan Dougherty - UX Designer";
-    
-    // Function to handle scroll events for sticky header
+
     const handleScroll = () => {
       const header = document.querySelector('.case-study-header');
-      if (header) {
-        // Only add 'scrolled' class when scrolled past a certain point (10px)
-        if (window.scrollY > 10) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }
+      if (!header) return;
+      if (window.scrollY > 10) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
     };
 
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-    
-    // Initial check (in case page loads already scrolled)
-    handleScroll();
-    
-    // Cleanup function
+    handleScroll(); // initial
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Function to check if a link should be marked as active
-  const isActive = (path) => {
-    if (path === '/' && location.pathname === '/') return true;
-    if (path === '/#case-studies' && location.hash === '#case-studies') return true;
-    if (path === '/#contact' && location.hash === '#contact') return true;
-    return false;
-  };
+  // helper for active link
+  const isActive = (path) =>
+    (path === '/' && location.pathname === '/') ||
+    (path === '/#case-studies' && location.hash === '#case-studies') ||
+    (path === '/#contact' && location.hash === '#contact');
 
   return (
     <div className="case-study-full">
       <header className="case-study-header">
-        <Link to="/" className="logo">Dan Dougherty</Link>
+        {/* keep logo on desktop, hide via CSS on mobile */}
+        <Link to="/" className="logo">
+          Dan Dougherty
+        </Link>
+
+        {/* STATIC nav, always visible */}
         <nav className="case-study-nav">
-          <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
-          <Link to="/#case-studies" className={isActive('/#case-studies') ? 'active' : ''}>Case Studies</Link>
-          <Link to="/#contact" className={isActive('/#contact') ? 'active' : ''}>Contact</Link>
+          <Link to="/" className={isActive('/') ? 'active' : ''}>
+            Home
+          </Link>
+          <Link
+            to="/#case-studies"
+            className={isActive('/#case-studies') ? 'active' : ''}
+          >
+            Case Studies
+          </Link>
+          <Link
+            to="/#contact"
+            className={isActive('/#contact') ? 'active' : ''}
+          >
+            Contact
+          </Link>
         </nav>
       </header>
 
