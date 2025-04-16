@@ -378,6 +378,15 @@ const IIDPCaseStudy = () => {
             afterImage: IIDPProgramAfter
           },
           {
+            src: IIDPGetInvolvedAfter,
+            alt: "Get Involved Page After Implementation",
+            caption: "Get Involved",
+            onClick: openBeforeAfterModal,
+            pageName: "Get Involved",
+            beforeImage: IIDPGetInvolvedBefore,
+            afterImage: IIDPGetInvolvedAfter
+          },
+          {
             src: IIDPContactAfter,
             alt: "Contact Page After Implementation",
             caption: "Contact",
