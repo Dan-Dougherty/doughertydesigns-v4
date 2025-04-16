@@ -1,23 +1,56 @@
 import React, { useEffect } from 'react';
 import './CaseStudy.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const PortfolioCaseStudy = () => {
+  const location = useLocation();
+
   useEffect(() => {
     document.title = "Crafting My Portfolio | Dan Dougherty - UX Designer";
+    
+    // Function to handle scroll events for sticky header
+    const handleScroll = () => {
+      const header = document.querySelector('.case-study-header');
+      if (header) {
+        // Only add 'scrolled' class when scrolled past a certain point (10px)
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check (in case page loads already scrolled)
+    handleScroll();
+    
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
+  // Function to check if a link should be marked as active
+  const isActive = (path) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path === '/#case-studies' && location.hash === '#case-studies') return true;
+    if (path === '/#contact' && location.hash === '#contact') return true;
+    return false;
+  };
 
   return (
     <div className="case-study-full">
-
       <header className="case-study-header">
         <Link to="/" className="logo">
           Dan Dougherty
         </Link>
         <nav className="case-study-nav">
-          <Link to="/">Home</Link>
-          <Link to="/#case-studies">Case Studies</Link>
-          <Link to="/#contact">Contact</Link>
+          <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
+          <Link to="/#case-studies" className={isActive('/#case-studies') ? 'active' : ''}>Case Studies</Link>
+          <Link to="/#contact" className={isActive('/#contact') ? 'active' : ''}>Contact</Link>
         </nav>
       </header>
 

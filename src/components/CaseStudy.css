@@ -10,6 +10,91 @@
   box-sizing: border-box;
 }
 
+/* Add these styles to your CaseStudy.css file */
+
+/* Sticky Navigation Styles */
+.case-study-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  /* Remove shadow by default */
+  box-shadow: none;
+}
+
+/* Only add shadow when scrolled */
+.case-study-header.scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Make sure the nav extends full width when scrolling */
+.case-study-full .case-study-header {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50% + 20px);
+  padding-right: calc(50vw - 50% + 20px);
+  margin-bottom: 60px;
+}
+
+/* Add some padding to body to prevent content from appearing under sticky header */
+.case-study-full {
+  padding-top: 20px;
+}
+
+/* Enhance the navigation links to be more visible */
+.case-study-nav a {
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Add a subtle indicator for the active link */
+.case-study-nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #0073b1;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.case-study-nav a:hover:after,
+.case-study-nav a.active:after {
+  width: 100%;
+}
+
+/* Responsive adjustments for sticky header */
+@media (max-width: 768px) {
+  .case-study-header {
+    padding: 15px;
+  }
+  
+  /* For mobile, make logo smaller when scrolling */
+  .case-study-header.scrolled .logo {
+    font-size: 1.5em;
+  }
+  
+  /* Adjust navigation layout for small screens */
+  .case-study-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
+  }
+  
+  .case-study-nav a {
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+}
+
 /* Case Study Container */
 .case-study-full {
   font-family: 'Open Sans', sans-serif;
@@ -123,11 +208,6 @@
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s;
-}
-
-.case-study-full .case-study-nav a:hover {
-  color: #005582;
-  text-decoration: underline;
 }
 
 /* Roles Section */
