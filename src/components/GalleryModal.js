@@ -178,7 +178,7 @@ const GalleryModal = ({ isOpen, onRequestClose, gallery, title }) => {
     
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, isZoomed, onRequestClose]);
+  }, [isOpen, isZoomed, onRequestClose, handlePrev, handleNext]); // Added missing dependencies
 
   // Add and remove event listeners for mouse move and up
   useEffect(() => {
