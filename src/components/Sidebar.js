@@ -3,7 +3,7 @@
 import React from 'react';
 import './Sidebar.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import resumePDF from '../assets/Daniel Dougherty UX Resume ATS 2024.pdf';
+import resumePDF from '../assets/Daniel Dougherty UX Resume ATS 2025.pdf';
 
 const Sidebar = () => {
   const skills = [
