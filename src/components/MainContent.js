@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './MainContent.css';
 import { Link } from 'react-router-dom';
-import { FaProjectDiagram, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import { FaProjectDiagram, FaBriefcase, FaGraduationCap, FaLaptopCode } from 'react-icons/fa';
 
 // Import images
 import {
@@ -11,6 +11,8 @@ import {
   portfolioThumbnail,
   butchersUnionThumbnail,
   IIDPThumbnail,
+  WestMichiganWebThumbnail,    
+  BabyShowerThumbnail         
 } from '../assets/images';
 
 // Import Helmet
@@ -282,12 +284,147 @@ const MainContent = () => {
         </div>
       </section>
 
+      {/* Development & Design Showcases */}
+      <section id="dev-design">
+        <h2>
+          <FaLaptopCode /> Development & Design Showcases
+        </h2>
+        <div className="case-studies-container">
+          {/* West Michigan Web freelance site */}
+          <div className="case-study-card">
+            <div className="case-study-image-container">
+              <img
+                src={WestMichiganWebThumbnail}
+                alt="Screenshot of West Michigan Web site"
+                className="case-study-image"
+              />
+            </div>
+            <div className="case-study-content">
+              <h3>West Michigan Web</h3>
+              <p>
+                Built a marketing website for my freelance business, West Michigan Web, using Astro.  
+                I optimized performance by generating responsive hero-image variants, lazy-load­ing below-the-fold assets, and preloading critical fonts; implemented semantic HTML and high-contrast styling for accessibility; configured SEO-friendly meta tags, canonical URLs, and social-preview metadata; and set up Netlify Forms  to capture local small-business leads.
+              </p>
+              <div className="skills">
+                <span>Astro</span>
+                <span>Tailwind CSS</span>
+                <span>Performance Optimization</span>
+                <span>Accessibility</span>
+                <span>Netlify Forms</span>
+              </div>
+              <a
+                href="https://wmichiganweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-more"
+              >
+                Visit Live Site
+              </a>
+            </div>
+          </div>
+
+          {/* Baby Shower landing page */}
+          <div className="case-study-card">
+            <div className="case-study-image-container">
+              <img
+                src={BabyShowerThumbnail}
+                alt="Screenshot of Dan & Laura’s baby shower landing page"
+                className="case-study-image"
+              />
+            </div>
+            <div className="case-study-content">
+              <h3>Dan & Laura’s Baby Shower</h3>
+              <p>
+                Designed and launched a multipage baby-shower site in just 24 hours with Astro.  
+                Features include a live countdown ticker to the event, an RSVP form powered by Netlify Forms + Zapier with duplicate-submission filtering, custom SVG icons, and thoughtful UX touches—like hover and focus states on buttons and cards and semantic markup for accessibility.
+              </p>
+              <div className="skills">
+                <span>Astro</span>
+                <span>JavaScript</span>
+                <span>Netlify Forms</span>
+                <span>Zapier</span>
+                <span>Accessibility</span>
+                <span>Responsive Design</span>
+                <span>Tailwind CSS</span>
+              </div>
+              <a
+                href="https://lauramaesbabyshower.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-more"
+              >
+                Visit Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Work Experience Section */}
       <section id="experience">
         <h2>
           <FaBriefcase /> Work Experience
         </h2>
         <div className="timeline">
+
+          {/* Freelance UX Designer */}
+          <div className="timeline-item">
+            <div className="timeline-date">Jun 2024 – Present</div>
+            <div className="timeline-content">
+              <h3>Freelance UX Designer</h3>
+              <p>
+                <em>West Michigan Web</em>
+              </p>
+              <p>
+                Redesigned Butcher’s Union website to boost engagement through user research,
+                wireframing, and high-fidelity prototyping; partnered with clients to refine
+                brand voice and usability via iterative design in Adobe XD and Creative Suite;
+                and built & maintain my own freelance marketing site, West Michigan Web, using
+                Astro—optimizing performance, accessibility, and SEO to showcase services and
+                capture local leads.
+              </p>
+              <div className="skills">
+                <span>User Research</span>
+                <span>Wireframing</span>
+                <span>Prototyping</span>
+                <span>Adobe XD</span>
+                <span>Adobe Creative Suite</span>
+                <span>Iterative Design</span>
+                <span>Astro</span>
+                <span>Performance Optimization</span>
+                <span>Accessibility</span>
+                <span>SEO</span>
+              </div>
+            </div>
+          </div>
+
+
+
+          {/* Lead UX/UI Designer & WordPress Developer (Volunteer) – IIDP */}
+          <div className="timeline-item">
+              <div className="timeline-date">Mar 2025</div>
+              <div className="timeline-content">
+              <h3>Lead UX/UI Designer & WordPress Developer (Volunteer)</h3>
+                <p>
+                  <em>48in48 Website Sprint – International Institute of Diplomacy for PROMISES (IIDP)</em>
+                </p>
+                <p>
+                  In a 48-hour volunteer sprint, I led a rapid kickoff workshop with IIDP’s founder to define objectives and map user flows for students, professionals, and donors; sketched hand-drawn wireframes for layout and hierarchy; refined and supplemented copy to ensure a cohesive narrative; then built eight mobile-first pages in WordPress using Beaver Builder with a WCAG 2.1 AA–ready design system and integrated donation & volunteer-signup modules.
+                </p>
+                <div className="skills">
+                  <span>Project Leadership</span>
+                  <span>Information Architecture</span>
+                  <span>Wireframing</span>
+                  <span>Content Strategy</span>
+                  <span>WordPress Development</span>
+                  <span>Beaver Builder</span>
+                  <span>Accessibility Design</span>
+                  <span>User Experience</span>
+                </div>
+            </div>
+          </div>
+
           {/* Lead UX/UI Designer & Project Lead - 48in48 Non-Profit Website Build */}
           <div className="timeline-item">
             <div className="timeline-date">Oct 2024</div>
@@ -316,32 +453,7 @@ const MainContent = () => {
             </div>
           </div>
 
-          {/* Freelance UX Designer - Dougherty Designs */}
-          <div className="timeline-item">
-            <div className="timeline-date">Jun 2024 – Present</div>
-            <div className="timeline-content">
-              <h3>Freelance UX Designer</h3>
-              <p>
-                <em>Dougherty Designs</em>
-              </p>
-              <p>
-                Redesigned Butcher’s Union website to boost user engagement,
-                using user research, wireframing, and high-fidelity prototyping.
-                Partnered with clients to refine brand voice and usability,
-                creating user-friendly interfaces aligned with client goals via
-                iterative design in Adobe XD and Creative Suite.
-              </p>
-              <div className="skills">
-                <span>User Research</span>
-                <span>Wireframing</span>
-                <span>Prototyping</span>
-                <span>Adobe XD</span>
-                <span>Adobe Creative Suite</span>
-                <span>Client Collaboration</span>
-                <span>Iterative Design</span>
-              </div>
-            </div>
-          </div>
+          
 
           {/* General Manager - 129 Hub */}
           <div className="timeline-item">
