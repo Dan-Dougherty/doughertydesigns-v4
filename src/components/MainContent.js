@@ -348,7 +348,7 @@ const MainContent = () => {
                 <span>Tailwind CSS</span>
               </div>
               <a
-                href="https://lauramaesbabyshower.netlify.app/"
+                href="https://lauramaesbabyshower.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="read-more"
